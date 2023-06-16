@@ -1,4 +1,7 @@
 const main = document.querySelector('#main');
+const addBookBtn = document.getElementById('add_book');
+const closeFormBtn = document.getElementById('close_btn');
+const form = document.getElementById('form');
 
 let myLibrary = [];
 
@@ -25,6 +28,14 @@ function displayLibrary() {
     main.appendChild(content);
   }
 }
+
+addBookBtn.addEventListener('click', function() {
+  form.style.display = 'block';
+});
+
+closeFormBtn.addEventListener('click', function() {
+  form.style.display = 'none';
+});
 
 const book1 = new Book('The Hobbit', 'J.R.R. Tolkien', 650, 'read');
 const book2 = new Book('Cujo', 'Stephen King', 425, 'not read yet');
