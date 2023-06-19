@@ -4,6 +4,52 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-btn-color: #238636;
+  --secondary-btn-color: #29a842;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #edede9;
+}
+
 #form {
   display: none;
+}
+
+svg {
+  height: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 70px 0px 70px;
+  height: 75px;
+  background-color: white;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#add_book {
+  color: white;
+  font-weight: bold;
+  background-color: var(--main-btn-color);
+  padding: 11px 20px 11px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#add_book:hover {
+  background-color: var(--secondary-btn-color);
 }

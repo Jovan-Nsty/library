@@ -55,6 +55,7 @@ submitBtn.addEventListener('click', function(event) {
     pageNumbValue,
     checkValueResult
   );
+
   addBookToLibrary(book);
   form.style.display = 'none';
   displayLibrary();
