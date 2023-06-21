@@ -128,3 +128,22 @@ header div {
 #close-btn:hover {
   background-color: var(--secondary-red-btn-color);
 }
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  font-weight: bold;
+  margin: 20px 20px 20px 20px;
+  padding: 30px 60px 30px 60px;
+  border-radius: 1.3rem;
+  min-width: 700px;
+}

@@ -34,6 +34,7 @@ function displayLibrary() {
 
 addBookBtn.addEventListener('click', function() {
   form.style.display = 'block';
+  form.reset();
 });
 
 closeFormBtn.addEventListener('click', function() {
