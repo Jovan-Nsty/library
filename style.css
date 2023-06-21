@@ -7,6 +7,8 @@
 :root {
   --main-btn-color: #238636;
   --secondary-btn-color: #29a842;
+  --main-red-btn-color: #bc0000;
+  --secondary-red-btn-color: #d60000;
 }
 
 html {
@@ -17,8 +19,56 @@ body {
   background-color: #edede9;
 }
 
+html,
+body {
+  height: 100vh;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #form {
   display: none;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  background-color: white;
+  padding: 25px;
+  border-radius: 5%;
+}
+
+#form-flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#form-flex > * {
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+
+input[type=text],
+[type=number] {
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#form > button {
+  padding: 10px 15px;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#form-check-panel {
+  margin-top: 10px;
 }
 
 svg {
@@ -40,7 +90,7 @@ header div {
   gap: 10px;
 }
 
-#add_book {
+#add-book-btn {
   color: white;
   font-weight: bold;
   background-color: var(--main-btn-color);
@@ -50,6 +100,31 @@ header div {
   cursor: pointer;
 }
 
-#add_book:hover {
+#add-book-btn:hover {
   background-color: var(--secondary-btn-color);
+}
+
+#submit-btn,
+#close-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+#submit-btn {
+  background-color: var(--main-btn-color);
+}
+
+#submit-btn:hover {
+  background-color: var(--secondary-btn-color);
+}
+
+#close-btn {
+  background-color: var(--main-red-btn-color);
+}
+
+#close-btn:hover {
+  background-color: var(--secondary-red-btn-color);
 }

@@ -1,8 +1,8 @@
 const main = document.querySelector('#main');
-const addBookBtn = document.getElementById('add_book');
-const closeFormBtn = document.getElementById('close_btn');
+const addBookBtn = document.getElementById('add-book-btn');
+const closeFormBtn = document.getElementById('close-btn');
 const form = document.getElementById('form');
-const submitBtn = document.getElementById('submit_btn');
+const submitBtn = document.getElementById('submit-btn');
 
 let myLibrary = [];
 
@@ -42,10 +42,10 @@ closeFormBtn.addEventListener('click', function() {
 
 submitBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  const titleValue = document.getElementById('titleValue').value;
-  const authorValue = document.getElementById('authorValue').value;
-  const pageNumbValue = document.getElementById('pageNumbValue').value;
-  const checkValue = document.getElementById('checkValue');
+  const titleValue = document.getElementById('title').value;
+  const authorValue = document.getElementById('author').value;
+  const pageNumbValue = document.getElementById('number-of-pages').value;
+  const checkValue = document.getElementById('book-read-check');
 
   const checkValueResult = checkValue.checked ? 'Read' : 'Not read yet';
 
