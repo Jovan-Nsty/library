@@ -24,6 +24,7 @@ function addBookToLibrary(book) {
 function displayLibrary() {
   // Clear the existing content
   main.innerHTML = '';
+  // Populate the page with book cards
   for (let i = 0; i < myLibrary.length; i++) {
     const content = document.createElement('div');
     content.classList.add('card');
@@ -41,8 +42,7 @@ closeFormBtn.addEventListener('click', function() {
   form.style.display = 'none';
 });
 
-submitBtn.addEventListener('click', function(event) {
-  event.preventDefault();
+function addObjectToArray() {
   const titleValue = document.getElementById('title').value;
   const authorValue = document.getElementById('author').value;
   const pageNumbValue = document.getElementById('number-of-pages').value;
@@ -58,6 +58,12 @@ submitBtn.addEventListener('click', function(event) {
   );
 
   addBookToLibrary(book);
+}
+
+// Form submit action
+submitBtn.addEventListener('click', function(event) {
+  event.preventDefault();
   form.style.display = 'none';
+  addObjectToArray();
   displayLibrary();
 });
