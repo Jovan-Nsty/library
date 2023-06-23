@@ -4,6 +4,23 @@ const closeFormBtn = document.getElementById('close-btn');
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit-btn');
 
+addBookBtn.addEventListener('click', () => {
+  form.style.display = 'block';
+  form.reset();
+});
+
+closeFormBtn.addEventListener('click', () => {
+  form.style.display = 'none';
+});
+
+// Form submit action
+submitBtn.addEventListener('click', event => {
+  event.preventDefault();
+  form.style.display = 'none';
+  addObjectToArray();
+  displayLibrary();
+});
+
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -33,15 +50,6 @@ function displayLibrary() {
   }
 }
 
-addBookBtn.addEventListener('click', function() {
-  form.style.display = 'block';
-  form.reset();
-});
-
-closeFormBtn.addEventListener('click', function() {
-  form.style.display = 'none';
-});
-
 function addObjectToArray() {
   const titleValue = document.getElementById('title').value;
   const authorValue = document.getElementById('author').value;
@@ -59,11 +67,3 @@ function addObjectToArray() {
 
   addBookToLibrary(book);
 }
-
-// Form submit action
-submitBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  form.style.display = 'none';
-  addObjectToArray();
-  displayLibrary();
-});
