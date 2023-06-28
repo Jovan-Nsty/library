@@ -14,7 +14,7 @@ closeFormBtn.addEventListener('click', () => {
 });
 
 // Form submit action
-document.getElementById('form').addEventListener('submit', event => {
+form.addEventListener('submit', event => {
   console.log('event');
   event.preventDefault();
   form.style.display = 'none';
