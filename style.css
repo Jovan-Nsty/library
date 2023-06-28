@@ -147,3 +147,13 @@ header div {
   border-radius: 1.3rem;
   min-width: 700px;
 }
+
+.cardBtn {
+  align-self: flex-end;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  margin-bottom: 25px;
+  margin-left: 665px;
+}

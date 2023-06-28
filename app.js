@@ -38,15 +38,33 @@ function addBookToLibrary(book) {
   myLibrary.unshift(book);
 }
 
+function removeBook(index) {
+  myLibrary.splice(index, 1);
+  displayLibrary();
+}
+
 function displayLibrary() {
   // Clear the existing content
-  main.innerHTML = '';
+  main.textContent = '';
   // Populate the page with book cards
   for (let i = 0; i < myLibrary.length; i++) {
-    const content = document.createElement('div');
-    content.classList.add('card');
-    content.textContent = myLibrary[i].info();
-    main.appendChild(content);
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    const textDiv = document.createElement('div');
+    textDiv.textContent = myLibrary[i].info();
+
+    const cardEscBtn = document.createElement('button');
+    cardEscBtn.classList.add('cardBtn');
+    cardEscBtn.textContent = 'x';
+
+    cardEscBtn.addEventListener('click', () => {
+      removeBook(i);
+    });
+
+    card.appendChild(textDiv);
+    card.appendChild(cardEscBtn);
+    main.appendChild(card);
   }
 }
 
