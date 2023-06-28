@@ -74,11 +74,6 @@ function addObjectToArray() {
   const pageNumbValue = document.getElementById('number-of-pages').value;
   const checkValue = document.getElementById('book-read-check');
 
-  console.log(titleValue);
-  console.log(authorValue);
-  console.log(pageNumbValue);
-  console.log(checkValue);
-
   const checkValueResult = checkValue.checked ? 'Read' : 'Not read yet';
 
   const book = new Book(
