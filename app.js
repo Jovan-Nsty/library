@@ -14,7 +14,8 @@ closeFormBtn.addEventListener('click', () => {
 });
 
 // Form submit action
-submitBtn.addEventListener('submit', event => {
+document.getElementById('form').addEventListener('submit', event => {
+  console.log('event');
   event.preventDefault();
   form.style.display = 'none';
   addObjectToArray();
@@ -73,6 +74,11 @@ function addObjectToArray() {
   const authorValue = document.getElementById('author').value;
   const pageNumbValue = document.getElementById('number-of-pages').value;
   const checkValue = document.getElementById('book-read-check');
+
+  console.log(titleValue);
+  console.log(authorValue);
+  console.log(pageNumbValue);
+  console.log(checkValue);
 
   const checkValueResult = checkValue.checked ? 'Read' : 'Not read yet';
 
