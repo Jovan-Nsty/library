@@ -15,7 +15,6 @@ closeFormBtn.addEventListener('click', () => {
 
 // Form submit action
 form.addEventListener('submit', event => {
-  console.log('event');
   event.preventDefault();
   form.style.display = 'none';
   addObjectToArray();
