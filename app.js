@@ -14,7 +14,7 @@ closeFormBtn.addEventListener('click', () => {
 });
 
 // Form submit action
-submitBtn.addEventListener('click', event => {
+submitBtn.addEventListener('submit', event => {
   event.preventDefault();
   form.style.display = 'none';
   addObjectToArray();
