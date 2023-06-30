@@ -30,15 +30,6 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary(book) {
-  myLibrary.unshift(book);
-}
-
-function removeBook(index) {
-  myLibrary.splice(index, 1);
-  displayLibrary();
-}
-
 Book.prototype.info = function() {
   return `${this.title} by ${this.author}, ${this.pages} pages.`;
 };
@@ -47,6 +38,15 @@ Book.prototype.updateReadStatus = function(index) {
   myLibrary[index].read = !this.read;
   displayLibrary();
 };
+
+function addBookToLibrary(book) {
+  myLibrary.unshift(book);
+}
+
+function removeBook(index) {
+  myLibrary.splice(index, 1);
+  displayLibrary();
+}
 
 function displayLibrary() {
   // Clear the existing content
