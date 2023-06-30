@@ -1,8 +1,8 @@
 const main = document.querySelector('#main');
-const addBookBtn = document.getElementById('add-book-btn');
-const closeFormBtn = document.getElementById('close-btn');
+const addBookBtn = document.getElementById('addBookBtn');
+const closeFormBtn = document.getElementById('closeBtn');
 const form = document.getElementById('form');
-const submitBtn = document.getElementById('submit-btn');
+const submitBtn = document.getElementById('submitBtn');
 
 addBookBtn.addEventListener('click', () => {
   form.style.display = 'block';
@@ -28,10 +28,6 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-
-  this.info = function() {
-    return `${this.title} by ${this.author}, ${this.pages} pages.`;
-  };
 }
 
 function addBookToLibrary(book) {
@@ -42,6 +38,10 @@ function removeBook(index) {
   myLibrary.splice(index, 1);
   displayLibrary();
 }
+
+Book.prototype.info = function() {
+  return `${this.title} by ${this.author}, ${this.pages} pages.`;
+};
 
 Book.prototype.updateReadStatus = function(index) {
   myLibrary[index].read = !this.read;
@@ -97,8 +97,8 @@ function displayLibrary() {
 function addObjectToArray() {
   const titleValue = document.getElementById('title').value;
   const authorValue = document.getElementById('author').value;
-  const pageNumbValue = document.getElementById('number-of-pages').value;
-  const checkValue = document.getElementById('book-read-check');
+  const pageNumbValue = document.getElementById('numberOfPages').value;
+  const checkValue = document.getElementById('bookReadCheck');
 
   const checkValueResult = checkValue.checked ? true : false;
 

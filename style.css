@@ -24,7 +24,7 @@ body {
   height: 100vh;
 }
 
-#form-container {
+#formContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,13 +40,13 @@ body {
   border-radius: 5%;
 }
 
-#form-flex {
+#formFlex {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-#form-flex > * {
+#formFlex > * {
   margin-bottom: 10px;
   font-weight: bold;
   letter-spacing: 0.08rem;
@@ -67,7 +67,7 @@ input[type=text],
   font-weight: bold;
 }
 
-#form-check-panel {
+#formCheckPanel {
   margin-top: 10px;
 }
 
@@ -90,7 +90,7 @@ header div {
   gap: 10px;
 }
 
-#add-book-btn {
+#addBookBtn {
   color: white;
   font-weight: bold;
   background-color: var(--main-btn-color);
@@ -100,12 +100,12 @@ header div {
   cursor: pointer;
 }
 
-#add-book-btn:hover {
+#addBookBtn:hover {
   background-color: var(--secondary-btn-color);
 }
 
-#submit-btn,
-#close-btn {
+#submitBtn,
+#closeBtn {
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
@@ -113,19 +113,19 @@ header div {
   color: white;
 }
 
-#submit-btn {
+#submitBtn {
   background-color: var(--main-btn-color);
 }
 
-#submit-btn:hover {
+#submitBtn:hover {
   background-color: var(--secondary-btn-color);
 }
 
-#close-btn {
+#closeBtn {
   background-color: var(--main-red-btn-color);
 }
 
-#close-btn:hover {
+#closeBtn:hover {
   background-color: var(--secondary-red-btn-color);
 }
 
