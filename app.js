@@ -1,8 +1,8 @@
 const main = document.querySelector('#main');
-const addBookBtn = document.getElementById('addBookBtn');
-const closeFormBtn = document.getElementById('closeBtn');
+const addBookBtn = document.getElementById('add-book-button');
+const closeFormBtn = document.getElementById('close-button');
 const form = document.getElementById('form');
-const submitBtn = document.getElementById('submitBtn');
+const submitBtn = document.getElementById('submit-button');
 
 addBookBtn.addEventListener('click', () => {
   form.style.display = 'block';
@@ -63,7 +63,7 @@ function displayLibrary() {
 
     // Create toggle button for read/not read
     const readToggleBtn = document.createElement('button');
-    readToggleBtn.classList.add('readToggleBtn');
+    readToggleBtn.classList.add('read-toggle-button');
 
     // Toggle read status and color on toggle buttons
     if (myLibrary[i].read) {
@@ -76,7 +76,7 @@ function displayLibrary() {
 
     // Create card escape (delete) button
     const cardEscBtn = document.createElement('button');
-    cardEscBtn.classList.add('cardBtn');
+    cardEscBtn.classList.add('card-button');
     cardEscBtn.textContent = 'x';
 
     card.appendChild(textDiv);
@@ -97,8 +97,8 @@ function displayLibrary() {
 function addObjectToArray() {
   const titleValue = document.getElementById('title').value;
   const authorValue = document.getElementById('author').value;
-  const pageNumbValue = document.getElementById('numberOfPages').value;
-  const checkValue = document.getElementById('bookReadCheck');
+  const pageNumbValue = document.getElementById('number-of-pages').value;
+  const checkValue = document.getElementById('book-read-check');
 
   const checkValueResult = checkValue.checked ? true : false;
 

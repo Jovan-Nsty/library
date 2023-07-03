@@ -24,7 +24,7 @@ body {
   height: 100vh;
 }
 
-#formContainer {
+#form-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,13 +40,13 @@ body {
   border-radius: 5%;
 }
 
-#formFlex {
+#form-flex {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-#formFlex > * {
+#form-flex > * {
   margin-bottom: 10px;
   font-weight: bold;
   letter-spacing: 0.08rem;
@@ -67,7 +67,7 @@ input[type=text],
   font-weight: bold;
 }
 
-#formCheckPanel {
+#form-check-panel {
   margin-top: 10px;
 }
 
@@ -90,7 +90,7 @@ header div {
   gap: 10px;
 }
 
-#addBookBtn {
+#add-book-button {
   color: white;
   font-weight: bold;
   background-color: var(--main-btn-color);
@@ -100,12 +100,12 @@ header div {
   cursor: pointer;
 }
 
-#addBookBtn:hover {
+#add-book-button:hover {
   background-color: var(--secondary-btn-color);
 }
 
-#submitBtn,
-#closeBtn {
+#submit-button,
+#close-button {
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
@@ -113,19 +113,19 @@ header div {
   color: white;
 }
 
-#submitBtn {
+#submit-button {
   background-color: var(--main-btn-color);
 }
 
-#submitBtn:hover {
+#submit-button:hover {
   background-color: var(--secondary-btn-color);
 }
 
-#closeBtn {
+#close-button {
   background-color: var(--main-red-btn-color);
 }
 
-#closeBtn:hover {
+#close-button:hover {
   background-color: var(--secondary-red-btn-color);
 }
 
@@ -149,7 +149,7 @@ header div {
   min-width: 700px;
 }
 
-.cardBtn {
+.card-button {
   align-self: flex-end;
   font-weight: bold;
   border: none;
@@ -160,7 +160,7 @@ header div {
   margin-left: 615px;
 }
 
-.readToggleBtn {
+.read-toggle-button {
   color: #fff;
   font-weight: bold;
   border: none;
