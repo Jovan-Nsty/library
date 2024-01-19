@@ -1,4 +1,4 @@
-const main = document.querySelector('#main');
+const main = document.getElementById('main');
 const addBookBtn = document.getElementById('add-book-button');
 const closeFormBtn = document.getElementById('close-button');
 const form = document.getElementById('form');
@@ -23,21 +23,23 @@ form.addEventListener('submit', event => {
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages} pages.`
+  }
+
+  updateReadStatus(index) {
+    myLibrary[index].read = !this.read;
+    displayLibrary();
+  }
 }
-
-Book.prototype.info = function() {
-  return `${this.title} by ${this.author}, ${this.pages} pages.`;
-};
-
-Book.prototype.updateReadStatus = function(index) {
-  myLibrary[index].read = !this.read;
-  displayLibrary();
-};
 
 function addBookToLibrary(book) {
   myLibrary.unshift(book);
