@@ -1,10 +1,18 @@
-Small library app.
+# Online Library
 
-Keep track of your favorite books! 
-Who is the author? The Title? How many pages? 
-Have you read it or not?
+## Preview
+![screenshot](images/library.png)
 
-Project done with HTML,CSS & JavaScript.
-Main focus was on building Book objects from aquired form data, adding them to the array and updating their read status via Prototype.
+## Description
+* A small online library app, keep track of your favorite books!
 
-This project was done following The Odin Project curriculum.
+## Made with
+* HTML, CSS and JavaScript.
+
+## Visit website
+* [Link](https://jovan-nsty.github.io/library/)
+
+## Purpose
+* The purpose of this project was to build book objects from aquired form data, updating their status via Prototype and updating the DOM.
+
+* This project was done following The Odin Project curriculum.
